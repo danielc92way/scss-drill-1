@@ -18,16 +18,29 @@ nav {
 .title--medium {
   font-size: 18px;
   font-weight: bold;
+  margin: 0.5rem 0rem;
 }
 
 .title--large {
   font-size: 30px;
   font-weight: bold;
+  margin: 0.6rem 0rem;
 }
 
 .title--huge {
   font-size: 50px;
   font-weight: bold;
+}
+
+.author-label {
+  text-decoration: underline;
+}
+
+.metric-label {
+  color: grey;
+  font-size: 14px;
+  font-weight: bolder;
+  margin: 0 0.8rem;
 }
 
 // Banner
@@ -115,13 +128,6 @@ nav {
   }
 }
 
-.card-metric {
-  color: grey;
-  font-size: 14px;
-  font-weight: bolder;
-  margin: 0 0.8rem;
-}
-
 .button {
   border-radius: 4px;
   font-size: 16px;
@@ -143,10 +149,6 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-.posted-by {
-  text-decoration: underline;
 }
 
 // Footer

@@ -17,22 +17,24 @@ function LargeCard() {
   return (
     <article class="card card--medium">
       <p className="title--large">{faker.lorem.text().slice(0, 20)}</p>
-      <p className="posted-by">posted by {faker.name.firstName()}</p>
+      <p>
+        posted by <span className="author-label">{faker.name.firstName()}</span>
+      </p>
       <p>{faker.lorem.sentences(5) + "... "}</p>
       <div className="card__footer">
         <article className="flex-container">
           <div className="item--centered">
             <img className="image" src={comment} alt="" />
-            <span className="card-metric">{faker.random.number(500)}</span>
+            <span className="metric-label">{faker.random.number(500)}</span>
           </div>
           <div className="item--centered">
             <img className="image" src={reaction} alt="" />
-            <span className="card-metric">{faker.random.number(500)}</span>
+            <span className="metric-label">{faker.random.number(500)}</span>
           </div>
         </article>
         <article className="flex-container">
           <div className="item--centered">
-            <span className="card-metric">
+            <span className="metric-label">
               {faker.random.number(10) + " minute read."}
             </span>
           </div>
