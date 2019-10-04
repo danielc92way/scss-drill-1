@@ -13,14 +13,7 @@ nav {
   margin-bottom: 1rem;
 }
 
-.banner {
-  background: white;
-  border-radius: 3px;
-  border: 2px solid black;
-  box-shadow: 5px 6px 0px#000000;
-  padding: 1.5rem 0rem;
-  text-align: center;
-}
+// Typography
 
 .title--medium {
   font-size: 18px;
@@ -36,6 +29,19 @@ nav {
   font-size: 50px;
   font-weight: bold;
 }
+
+// Banner
+
+.banner {
+  background: white;
+  border-radius: 3px;
+  border: 2px solid black;
+  box-shadow: 5px 6px 0px#000000;
+  padding: 1.5rem 0rem;
+  text-align: center;
+}
+
+// Layout
 
 .container {
   padding: 0 0.25rem;
@@ -53,36 +59,38 @@ nav {
   }
 }
 
-.container__general {
-  padding: 0.75rem;
-}
-
-footer {
-  border: 2px solid gold;
-  padding: 0.8rem;
-  text-align: center;
-}
-
-.centered {
+.item--centered {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.main-container {
+.column-container {
   display: flex;
 }
 
-.left-side {
-  flex: 1;
-}
+.column {
+  padding: 0.75rem;
 
-.right-side {
-  flex: 1;
-}
+  &__left {
+    flex: 1;
 
-.article-list {
-  flex: 3;
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  &__right {
+    flex: 1;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__middle {
+    flex: 3;
+  }
 }
 
 .card {
@@ -91,17 +99,20 @@ footer {
   border: 2px solid rgb(181, 181, 181);
   box-shadow: 3px 3px 0px rgb(135, 135, 135);
   margin-bottom: 1rem;
-  padding: 0.4rem 1rem;
-}
 
-.large-card {
-  padding: 0.8rem 1.6rem;
-}
+  &--small {
+    padding: 0.4rem 1rem;
+  }
 
-.card-bottom {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  &--medium {
+    padding: 0.8rem 1.6rem;
+  }
+
+  &__footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .card-metric {
@@ -112,13 +123,16 @@ footer {
 }
 
 .button {
-  background: blue;
   border-radius: 4px;
-  color: white;
   font-size: 16px;
   font-weight: bold;
   outline: none;
   padding: 0.3rem;
+
+  &--blue {
+    background: blue;
+    color: white;
+  }
 }
 
 .image {
@@ -135,14 +149,11 @@ footer {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1000px) {
-  .right-side {
-    display: none;
-  }
-}
+// Footer
 
-@media screen and (max-width: 700px) {
-  .left-side {
-    display: none;
-  }
+.footer {
+  background: blue;
+  color: white;
+  padding: 0.4rem;
+  text-align: center;
 }
