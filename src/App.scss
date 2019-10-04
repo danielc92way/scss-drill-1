@@ -1,28 +1,25 @@
-/* 
-font-family: 'Montserrat', sans-serif;
-font-family: 'IBM Plex Serif', serif; 
-*/
+// Inital setup
 
+body,
+html {
+  background: #f9f9fa;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
 nav {
   margin-bottom: 1rem;
 }
 
-body, html {
-  background: #F9F9FA;
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  font-family: 'Roboto', sans-serif; 
-}
-
 .banner {
   background: white;
+  border-radius: 3px;
+  border: 2px solid black;
+  box-shadow: 5px 6px 0px#000000;
   padding: 1.5rem 0rem;
   text-align: center;
-  box-shadow: 5px 6px 0px#000000;
-  border: 2px solid black;
-  border-radius: 3px;
 }
 
 .title--medium {
@@ -37,27 +34,21 @@ body, html {
 
 .title--huge {
   font-size: 50px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .container {
-  padding: 0 .25rem;
-}
+  padding: 0 0.25rem;
 
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  .container {
+  @media screen and (min-width: 601px) and (max-width: 900px) {
     padding: 0 3rem;
   }
-}
 
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  .container {
+  @media screen and (min-width: 901px) and (max-width: 1200px) {
     padding: 0 6rem;
   }
-}
 
-@media screen and (min-width: 1201px) {
-  .container {
+  @media screen and (min-width: 1201px) {
     padding: 0 9rem;
   }
 }
@@ -67,15 +58,17 @@ body, html {
 }
 
 footer {
-  text-align: center;
-  padding: 0.8rem;
   border: 2px solid gold;
+  padding: 0.8rem;
+  text-align: center;
 }
+
 .centered {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
+
 .main-container {
   display: flex;
 }
@@ -93,51 +86,50 @@ footer {
 }
 
 .card {
-  margin-bottom: 1rem;
   background: white;
-  padding: 0.4rem 1rem;
   border-radius: 3px;
   border: 2px solid rgb(181, 181, 181);
   box-shadow: 3px 3px 0px rgb(135, 135, 135);
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
 }
 
 .large-card {
-  padding: 1.4rem;
+  padding: 0.8rem 1.6rem;
 }
 
 .card-bottom {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .card-metric {
   color: grey;
+  font-size: 14px;
   font-weight: bolder;
   margin: 0 0.8rem;
-  font-size: 14px;
 }
 
 .button {
   background: blue;
   border-radius: 4px;
   color: white;
-  outline: none;
-  font-weight: bold;
-  padding: 0.3rem;
   font-size: 16px;
-
+  font-weight: bold;
+  outline: none;
+  padding: 0.3rem;
 }
+
 .image {
   max-width: 2rem;
 }
 
 .flex-container {
- display: flex;
- flex-direction: row;
- justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
 
 .posted-by {
   text-decoration: underline;
