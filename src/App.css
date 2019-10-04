@@ -3,34 +3,67 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'IBM Plex Serif', serif; 
 */
 
-/* Global fonts */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-}
 
-.title--large {
-  font-size: 3rem;
+nav {
+  margin-bottom: 1rem;
 }
 
 body, html {
+  background: #F9F9FA;
   padding: 0;
   margin: 0;
   height: 100vh;
-  font-family: 'IBM Plex Serif', serif; 
+  font-family: 'Roboto', sans-serif; 
 }
 
-nav {
-  padding: 0.8rem;
+.banner {
+  background: white;
+  padding: 1.5rem 0rem;
   text-align: center;
-  border: 2px solid gold;
+  box-shadow: 5px 6px 0px#000000;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+.title--medium {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title--large {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.title--huge {
+  font-size: 50px;
+  font-weight:bold;
 }
 
 .container {
-  padding: 0 3rem;
+  padding: 0 .25rem;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .container {
+    padding: 0 6rem;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .container {
+    padding: 0 9rem;
+  }
 }
 
 .container__general {
-  padding: 0.2rem;
+  padding: 0.75rem;
 }
 
 footer {
@@ -38,7 +71,11 @@ footer {
   padding: 0.8rem;
   border: 2px solid gold;
 }
-
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main-container {
   display: flex;
 }
@@ -52,11 +89,68 @@ footer {
 }
 
 .article-list {
-  flex: 4;
+  flex: 3;
 }
 
 .card {
-  border: 1px solid #f2f2f2;
-  padding: 0.25rem 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  background: white;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  border: 2px solid rgb(181, 181, 181);
+  box-shadow: 3px 3px 0px rgb(135, 135, 135);
+}
+
+.large-card {
+  padding: 1.4rem;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-metric {
+  color: grey;
+  font-weight: bolder;
+  margin: 0 0.8rem;
+  font-size: 14px;
+}
+
+.button {
+  background: blue;
+  border-radius: 4px;
+  color: white;
+  outline: none;
+  font-weight: bold;
+  padding: 0.3rem;
+  font-size: 16px;
+
+}
+.image {
+  max-width: 2rem;
+}
+
+.flex-container {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+}
+
+
+.posted-by {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+  .right-side {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .left-side {
+    display: none;
+  }
 }
